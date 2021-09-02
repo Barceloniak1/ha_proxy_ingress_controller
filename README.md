@@ -53,4 +53,5 @@ kubectl get secret [jenkins] --namespace=somenamespace -o yaml
  Copy and create secret in location of git with [jenkins], as yaml file 
 
 *[] without brackets - example pointed out
+** Make sure taht domain_adress in ingress has been added up 'C:\Windows\System32\drivers\etc\hosts' Communication Computer <-> HA_Proxy (Workers) <-> Ingress <-> Service <-> Pod
 ```
