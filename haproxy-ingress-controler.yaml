@@ -106,7 +106,7 @@ spec:
       containers:
       - name: ingress-default-backend
         image: gcr.io/google_containers/defaultbackend:1.0
-        imagePullPolicy: Always
+#        imagePullPolicy: Always
         ports:
         - containerPort: 8080
 
