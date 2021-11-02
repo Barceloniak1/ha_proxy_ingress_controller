@@ -106,6 +106,7 @@ spec:
       containers:
       - name: ingress-default-backend
         image: gcr.io/google_containers/defaultbackend:1.0
+        imagePullPolicy: Always
         ports:
         - containerPort: 8080
 
@@ -148,6 +149,7 @@ spec:
       containers:
       - name: haproxy-ingress
         image: haproxytech/kubernetes-ingress
+        imagePullPolicy: Always
         args:
           - --configmap=haproxy-controller/haproxy
           - --default-backend-service=haproxy-controller/ingress-default-backend
@@ -188,6 +190,7 @@ spec:
       initContainers:
         - name: sysctl
           image: busybox:musl
+          imagePullPolicy: Always
           command:
             - /bin/sh
             - -c
